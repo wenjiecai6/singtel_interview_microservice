@@ -1,0 +1,38 @@
+logging:
+  level:
+    com:
+      singtel:
+        interviewtest: DEBUG
+
+server:
+  port: 443
+  ssl:
+    enabled: true
+    protocol: TLS
+    enabled-protocols: TLSv1.2
+    key-store-type: PKCS12
+    key-store: file:./ext-files/singtelTest.p12
+    key-store-password: password
+    password: password
+
+spring:
+  datasource:
+    url: jdbc:h2:file:./data/sample
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+    initialization-mode: never
+  jpa:
+    database: h2
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+      dialect: org.hibernate.dialect.H2Dialect
+    properties:
+      hibernate:
+        enable_lazy_load_no_trans: true
+  h2:
+    console:
+      enabled: true
+      path: /h2

@@ -1,0 +1,15 @@
+2021-10-07 01:55:55 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "REQUEST_TRACE" not found; SQL statement:
+select * from request_trace [42102-200]
+2021-10-07 01:56:09 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TABLES" not found; SQL statement:
+select * from tables [42102-200]
+2021-10-07 01:56:48 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "REQUEST_TRACE" not found; SQL statement:
+select * from REQUEST_TRACE [42102-200]
+2021-10-07 02:01:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "REQUEST_TRACE" not found; SQL statement:
+insert into request_trace (id, url) values (null, ?) [42102-200]
+2021-10-07 02:04:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "REQUEST_TRACE" already exists; SQL statement:
+CREATE TABLE REQUEST_TRACE (ID BIGINT IDENTITY NOT NULL, URL NVARCHAR(255) NOT NULL) [42101-200]
